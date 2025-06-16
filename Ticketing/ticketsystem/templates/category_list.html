@@ -1,0 +1,19 @@
+<!-- category_list.html -->
+
+{% extends 'base.html' %}
+{% block title %}
+Category List
+{% endblock %}
+{% block content %}
+    <h1>Category List</h1>
+
+    <!-- Displaying categories -->
+    <ul>
+        {% for category in categories %}
+            <li>{{ category.name }}</li>
+            <!-- Add more fields as needed -->
+        {% empty %}
+            <li>No categories found.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

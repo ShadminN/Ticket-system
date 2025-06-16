@@ -1,0 +1,44 @@
+<!-- ticket_list.html -->
+
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Ticket List</h1>
+
+    <!-- Filter form example (replace with your actual filter form) -->
+    <form method="GET" action="{% url 'ticket' %}">
+        <input type="text" name="search" placeholder="Search...">
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Displaying paginated tickets -->
+    {% for ticket in tickets %}
+        <div>
+            <h3>{{ ticket.title }}</h3>
+            <p>{{ ticket.description }}</p>
+            <p>Assigned to: {{ ticket.assigned_to.username }}</p>
+            <p>Category: {{ ticket.category.name }}</p>
+            <!-- Add more fields as needed -->
+        </div>
+    {% empty %}
+        <p>No tickets found.</p>
+    {% endfor %} 
+
+    <!-- Pagination links -->
+    <div class="pagination">
+        <span class="step-links">
+            {% if tickets.has_previous %}
+                <a href="?page=1">&laquo; first</a>
+                <a href="?page={{ tickets.previous_page_number }}">previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ tickets.number }} of {{ tickets.paginator.num_pages }}.
+            </span>
+
+            {% if tickets.has_next %}
+                <a href="?page={{ tickets.next_page_number }}">next</a>
+                <a href="?page={{ tickets.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+{% endblock %}

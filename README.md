@@ -28,10 +28,13 @@ cd Ticket-system
 ## 2. Set up Python virtual environment
 
 python -m venv ts_env
-# Activate:
-# Windows:
+
+To Activate:
+
+Windows:
 ts_env\Scripts\activate
-# macOS/Linux:
+
+macOS/Linux:
 source ts_env/bin/activate
 
 ## 3. Install dependencies

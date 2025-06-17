@@ -1,8 +1,8 @@
-# 🎫 Ticket-System
+# Ticket-System
 
 A Django-based web application designed to manage and track support tickets efficiently. Built with a modular structure, it offers a user-friendly interface for creating, assigning, and resolving tickets.
 
-## 📌 Features
+## Features
 
 - **User Authentication** — Secure login/logout with Django’s built‑in auth system.
 - **Ticket Management** — Create, view, assign, and update ticket records.
@@ -11,14 +11,14 @@ A Django-based web application designed to manage and track support tickets effi
 - **Notification System** (If implemented or future scope) — Email updates or real-time alerts.
 - **Responsive UI** — Clean HTML/CSS templates powered by Django’s template engine.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Backend:** Python, Django  
 - **Database:** SQLite (default) — easily switchable to PostgreSQL/MySQL  
 - **Frontend:** Django Templates, HTML, CSS  
 - **Environments:** `ts_env` virtual environment setup
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the repository  
 
@@ -55,7 +55,7 @@ python manage.py runserver
 
 Access the site at http://127.0.0.1:8000/ and the admin panel at http://127.0.0.1:8000/admin.
 
-🌟 Future Enhancements
+## Future Enhancements
 Add email notifications for new or updated tickets
 
 Implement agent role permissions to restrict actions
@@ -65,5 +65,5 @@ Enhance frontend with Bootstrap or modern JS frameworks
 Add search, export, or analytics functionality
 
 
-📄 License
+## License
 This project is licensed under the MIT License. See LICENSE for details.

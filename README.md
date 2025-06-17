@@ -18,7 +18,7 @@ A Django-based web application designed to manage and track support tickets effi
 - **Frontend:** Django Templates, HTML, CSS  
 - **Environments:** `ts_env` virtual environment setup
 
-## Getting Started
+## How to Run the Project Locally
 
 ### 1. Clone the repository  
 
